@@ -1,3 +1,5 @@
-const header = () => {
+const Header = () => {
     
 }
+
+export default Header
