@@ -1,3 +1,5 @@
+import "./../styles/header.css"
+
 const Header = (props) => {
     const {title, subtitle} = props
     
