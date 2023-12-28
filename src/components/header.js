@@ -3,8 +3,8 @@ const Header = (props) => {
     
     return (
         <>
-            <h1>{title}</h1>
-            <h3>{subtitle}</h3>
+            <h1 className="title">{title}</h1>
+            <p className="subtitle">{subtitle}</p>
         </>
     )
 }
