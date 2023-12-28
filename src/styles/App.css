@@ -2,5 +2,5 @@
   width: 500px;
   height: 500px;
   background-color: var(--bg-container);
-  
+  border-radius: 20px;
 }
