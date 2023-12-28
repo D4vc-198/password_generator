@@ -1,8 +1,8 @@
-import './App.css';
+import "./styles/App.css";
 
 function App() {
   return (
-    <p>PASSWORD GENERATOR</p>
+    <div className="container"></div>
   );
 }
 
