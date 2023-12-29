@@ -1,7 +1,12 @@
-const PasswordConfig = () => {
+import "./../styles/passwordConfig.css"
 
+const PasswordConfig = () => {
+    
     return (
-        <h1>config</h1>
+        <div className="password-config-container">
+            <p>Password Length: 0</p>
+            <input className="password-select-length" type="range" min="0" max="100" />
+        </div>
     )
 }
 
