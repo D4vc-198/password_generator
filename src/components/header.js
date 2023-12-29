@@ -1,14 +1,14 @@
-import "./../styles/header.css"
+import "./../styles/header.css";
 
 const Header = (props) => {
-    const {title, subtitle} = props
-    
-    return (
-        <>
-            <h1 className="title">{title}</h1>
-            <p className="subtitle">{subtitle}</p>
-        </>
-    )
-}
+  const { title, subtitle } = props;
 
-export default Header
+  return (
+    <>
+      <h1 className="title">{title}</h1>
+      <p className="subtitle">{subtitle}</p>
+    </>
+  );
+};
+
+export default Header;
