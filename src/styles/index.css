@@ -1,9 +1,12 @@
 :root {
-  --bg-color: #1A1F37;
-  --bg-container: #FFF;
+  --bg-color: #040102;
+  --bg-container: #040102;
+  
+  --tx-color-primary: #FFF;
 }
 
 body {
+  color: var(--tx-color-primary);
   margin: 0;
   height: 100vh;
   background-color: var(--bg-color);
