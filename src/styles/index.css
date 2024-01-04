@@ -2,11 +2,12 @@
   --bg-color: #040102;
   --bg-container: #040102;
   
-  --tx-color-primary: #FFF;
+  --color-primary: #FFF;
+  --color-secondary: #00D6DA;
 }
 
 body {
-  color: var(--tx-color-primary);
+  color: var(--color-primary);
   margin: 0;
   height: 100vh;
   background-color: var(--bg-color);
