@@ -14,7 +14,7 @@ const PasswordConfig = () => {
         />
       </div>
       {/* PASSWORD CHARACTERS CONTAINER */}
-      <div>
+      <div className="checkbox-container">
         <div className="input-checkbox">
           <label>Uppercase</label>
           <input type="checkbox" />
