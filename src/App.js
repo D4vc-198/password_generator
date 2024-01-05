@@ -1,6 +1,6 @@
+import PasswordTxtContainer from "./components/PasswordTxtContainer";
 import Header from "./components/header";
 import PasswordConfig from "./components/passwordConfig";
-import PasswordContainer from "./components/passwordContainer";
 import "./styles/App.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         title="PASSWORD GENERATOR"
         subtitle="Create strong and secure passwords to keep your account safe online."
       />
-      <PasswordContainer />
+      <PasswordTxtContainer />
       <PasswordConfig />
     </div>
   );
