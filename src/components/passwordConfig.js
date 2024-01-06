@@ -32,6 +32,9 @@ const PasswordConfig = () => {
           <input type="checkbox" />
         </div>
       </div>
+      <div>
+        <button className="btn-generate-password">Generate</button>
+      </div>
     </div>
   );
 };
