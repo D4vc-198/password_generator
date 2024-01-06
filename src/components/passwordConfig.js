@@ -4,7 +4,7 @@ const PasswordConfig = () => {
   return (
     <div className="password-config-container">
       {/* PASSWORD Length */}
-      <div>
+      <div className="password-length-container">
         <p>Password Length: 0</p>
         <input
           className="password-select-length"
