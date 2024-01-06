@@ -15,24 +15,24 @@ const PasswordConfig = () => {
       </div>
       {/* PASSWORD CHARACTERS CONTAINER */}
       <div className="checkbox-container">
-        <div className="input-checkbox">
+        <div className="input-checkbox-container">
           <label>Uppercase</label>
-          <input type="checkbox" />
+          <input type="checkbox" className="checkbox"/>
         </div>
-        <div className="input-checkbox">
+        <div className="input-checkbox-container">
           <label>Lowercase</label>
-          <input type="checkbox" />
+          <input type="checkbox" className="checkbox" />
         </div>
-        <div className="input-checkbox">
+        <div className="input-checkbox-container">
           <label>Numbers</label>
-          <input type="checkbox" />
+          <input type="checkbox" className="checkbox" />
         </div>
-        <div className="input-checkbox">
+        <div className="input-checkbox-container">
           <label>Special Characters</label>
-          <input type="checkbox" />
+          <input type="checkbox" className="checkbox" />
         </div>
       </div>
-      <div>
+      <div className="btn-generate-password-container">
         <button className="btn-generate-password">Generate</button>
       </div>
     </div>
