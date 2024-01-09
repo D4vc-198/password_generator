@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./../styles/passwordConfig.css";
 
-const PasswordConfig = () => {
+const PasswordConfig = (props) => {
+  const {setPassword} = props
+
   const [passLength, setPassLength] = useState(8);
   const [passwordOptions, setPasswordOptions] = useState("");
   const [checkboxOptions, setCheckboxOptions] = useState({
@@ -49,9 +51,16 @@ const PasswordConfig = () => {
     }
   };
 
-  useEffect(() => {
-    console.log("passwordGen", passwordOptions);
-  }, [passwordOptions]);
+  const generatePassword = () => {
+    let passGen = "";
+    for (let i = 0; i < passLength; i++) {
+      passGen += passwordOptions.charAt(
+        Math.floor(Math.random() * passwordOptions.length)
+      );
+    }
+
+    setPassword(passGen);
+  };
 
   return (
     <div className="password-config-container">
@@ -113,7 +122,9 @@ const PasswordConfig = () => {
         </div>
       </div>
       <div className="btn-generate-password-container">
-        <button className="btn-generate-password">Generate</button>
+        <button className="btn-generate-password" onClick={generatePassword}>
+          Generate
+        </button>
       </div>
     </div>
   );

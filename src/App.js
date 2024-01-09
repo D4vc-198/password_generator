@@ -13,8 +13,8 @@ function App() {
         title="PASSWORD GENERATOR"
         subtitle="Create strong and secure passwords to keep your account safe online."
       />
-      <PasswordTxtContainer />
-      <PasswordConfig />
+      <PasswordTxtContainer password={password}/>
+      <PasswordConfig setPassword={setPassword}/>
     </div>
   );
 }
