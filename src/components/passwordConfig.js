@@ -11,37 +11,48 @@ const PasswordConfig = () => {
     specialChar: false,
   });
 
-  const strUpperCase = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
-  const strLowerCase = "abcdefghijklmnñopqrstuvwxyz"
-  const strNumbers = "0123456789"
-  const strSpecial = "!”#$%&‘()*+,-./:;=?@[\]^_`{|}~"
+  const strUpperCase = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+  const strLowerCase = "abcdefghijklmnñopqrstuvwxyz";
+  const strNumbers = "0123456789";
+  const strSpecial = "!”#$%&‘()*+,-./:;=?@[]^_`{|}~";
 
   const handleCheckboxOption = (option) => {
     setCheckboxOptions((prevState) => ({
       ...prevState,
       [option]: !prevState[option],
     }));
+
+    console.log("option: ", option)
   };
 
   useEffect(() => {
+    // checkboxOptions.uppercase ? setPasswordGen(passwordGen + strUpperCase) :  setPasswordGen(passwordGen.replace(strUpperCase, ""))
+    // checkboxOptions.lowercase ? setPasswordGen(passwordGen + strLowerCase) : setPasswordGen(passwordGen.replace(strLowerCase, ""))
     if (checkboxOptions.uppercase === true) {
       setPasswordGen(passwordGen + strUpperCase);
+    } else {
+      setPasswordGen(passwordGen.replace(strUpperCase, ""));
     }
     if (checkboxOptions.lowercase === true) {
       setPasswordGen(passwordGen + strLowerCase);
+    } else {
+      setPasswordGen(passwordGen.replace(strLowerCase, ""));
     }
     if (checkboxOptions.numbers === true) {
       setPasswordGen(passwordGen + strNumbers);
+    } else {
+      setPasswordGen(passwordGen.replace(strNumbers, ""));
     }
     if (checkboxOptions.specialChar === true) {
       setPasswordGen(passwordGen + strSpecial);
+    } else {
+      setPasswordGen(passwordGen.replace(strSpecial, ""));
     }
-
   }, [checkboxOptions]);
 
   useEffect(() => {
-    console.log("passwordGen", passwordGen)
-  }, [passwordGen])
+    console.log("passwordGen", passwordGen);
+  }, [passwordGen]);
 
   return (
     <div className="password-config-container">
