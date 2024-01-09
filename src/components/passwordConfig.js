@@ -3,7 +3,7 @@ import "./../styles/passwordConfig.css";
 
 const PasswordConfig = () => {
   const [passLength, setPassLength] = useState(8);
-  const [passwordGen, setPasswordGen] = useState("");
+  const [passwordOptions, setPasswordOptions] = useState("");
   const [checkboxOptions, setCheckboxOptions] = useState({
     uppercase: false,
     lowercase: false,
@@ -16,6 +16,15 @@ const PasswordConfig = () => {
   const strNumbers = "0123456789";
   const strSpecial = "!”#$%&‘()*+,-./:;=?@[]^_`{|}~";
 
+  // ELIMINA O AGREGA LOS VALORES A passwordOptions
+  const updateOptions = (condition, str) => {
+    if (condition) {
+      setPasswordOptions(passwordOptions + str);
+    } else {
+      setPasswordOptions(passwordOptions.replace(str, ""));
+    }
+  };
+
   const handleCheckboxOption = (option, value) => {
     setCheckboxOptions((prevState) => ({
       ...prevState,
@@ -24,65 +33,25 @@ const PasswordConfig = () => {
 
     switch (option) {
       case "uppercase":
-        if (value) {
-          setPasswordGen(passwordGen + strUpperCase);
-        } else {
-          setPasswordGen(passwordGen.replace(strUpperCase, ""));
-        }
+        updateOptions(value, strUpperCase);
         break;
       case "lowercase":
-        if (value) {
-          setPasswordGen(passwordGen + strLowerCase);
-        } else {
-          setPasswordGen(passwordGen.replace(strLowerCase, ""));
-        }
+        updateOptions(value, strLowerCase);
         break;
       case "numbers":
-        if (value) {
-          setPasswordGen(passwordGen + strNumbers);
-        } else {
-          setPasswordGen(passwordGen.replace(strNumbers, ""));
-        }
+        updateOptions(value, strNumbers);
         break;
       case "specialChar":
-        if (value) {
-          setPasswordGen(passwordGen + strSpecial);
-        } else {
-          setPasswordGen(passwordGen.replace(strSpecial, ""));
-        }
+        updateOptions(value, strSpecial);
         break;
       default:
         return;
     }
-    // console.log(`__OPCION: ${option} : ${value}`);
   };
 
   useEffect(() => {
-    // if (checkboxOptions.uppercase === true) {
-    //   setPasswordGen(passwordGen + strUpperCase);
-    // } else {
-    //   setPasswordGen(passwordGen.replace(strUpperCase, ""));
-    // }
-    // if (checkboxOptions.lowercase === true) {
-    //   setPasswordGen(passwordGen + strLowerCase);
-    // } else {
-    //   setPasswordGen(passwordGen.replace(strLowerCase, ""));
-    // }
-    // if (checkboxOptions.numbers === true) {
-    //   setPasswordGen(passwordGen + strNumbers);
-    // } else {
-    //   setPasswordGen(passwordGen.replace(strNumbers, ""));
-    // }
-    // if (checkboxOptions.specialChar === true) {
-    //   setPasswordGen(passwordGen + strSpecial);
-    // } else {
-    //   setPasswordGen(passwordGen.replace(strSpecial, ""));
-    // }
-  }, [checkboxOptions]);
-
-  useEffect(() => {
-    console.log("passwordGen", passwordGen);
-  }, [passwordGen]);
+    console.log("passwordGen", passwordOptions);
+  }, [passwordOptions]);
 
   return (
     <div className="password-config-container">
