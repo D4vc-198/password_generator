@@ -16,38 +16,68 @@ const PasswordConfig = () => {
   const strNumbers = "0123456789";
   const strSpecial = "!”#$%&‘()*+,-./:;=?@[]^_`{|}~";
 
-  const handleCheckboxOption = (option) => {
+  const handleCheckboxOption = (option, value) => {
     setCheckboxOptions((prevState) => ({
       ...prevState,
       [option]: !prevState[option],
     }));
 
-    console.log("option: ", option)
+    switch (option) {
+      case "uppercase":
+        if (value) {
+          setPasswordGen(passwordGen + strUpperCase);
+        } else {
+          setPasswordGen(passwordGen.replace(strUpperCase, ""));
+        }
+        break;
+      case "lowercase":
+        if (value) {
+          setPasswordGen(passwordGen + strLowerCase);
+        } else {
+          setPasswordGen(passwordGen.replace(strLowerCase, ""));
+        }
+        break;
+      case "numbers":
+        if (value) {
+          setPasswordGen(passwordGen + strNumbers);
+        } else {
+          setPasswordGen(passwordGen.replace(strNumbers, ""));
+        }
+        break;
+      case "specialChar":
+        if (value) {
+          setPasswordGen(passwordGen + strSpecial);
+        } else {
+          setPasswordGen(passwordGen.replace(strSpecial, ""));
+        }
+        break;
+      default:
+        return;
+    }
+    // console.log(`__OPCION: ${option} : ${value}`);
   };
 
   useEffect(() => {
-    // checkboxOptions.uppercase ? setPasswordGen(passwordGen + strUpperCase) :  setPasswordGen(passwordGen.replace(strUpperCase, ""))
-    // checkboxOptions.lowercase ? setPasswordGen(passwordGen + strLowerCase) : setPasswordGen(passwordGen.replace(strLowerCase, ""))
-    if (checkboxOptions.uppercase === true) {
-      setPasswordGen(passwordGen + strUpperCase);
-    } else {
-      setPasswordGen(passwordGen.replace(strUpperCase, ""));
-    }
-    if (checkboxOptions.lowercase === true) {
-      setPasswordGen(passwordGen + strLowerCase);
-    } else {
-      setPasswordGen(passwordGen.replace(strLowerCase, ""));
-    }
-    if (checkboxOptions.numbers === true) {
-      setPasswordGen(passwordGen + strNumbers);
-    } else {
-      setPasswordGen(passwordGen.replace(strNumbers, ""));
-    }
-    if (checkboxOptions.specialChar === true) {
-      setPasswordGen(passwordGen + strSpecial);
-    } else {
-      setPasswordGen(passwordGen.replace(strSpecial, ""));
-    }
+    // if (checkboxOptions.uppercase === true) {
+    //   setPasswordGen(passwordGen + strUpperCase);
+    // } else {
+    //   setPasswordGen(passwordGen.replace(strUpperCase, ""));
+    // }
+    // if (checkboxOptions.lowercase === true) {
+    //   setPasswordGen(passwordGen + strLowerCase);
+    // } else {
+    //   setPasswordGen(passwordGen.replace(strLowerCase, ""));
+    // }
+    // if (checkboxOptions.numbers === true) {
+    //   setPasswordGen(passwordGen + strNumbers);
+    // } else {
+    //   setPasswordGen(passwordGen.replace(strNumbers, ""));
+    // }
+    // if (checkboxOptions.specialChar === true) {
+    //   setPasswordGen(passwordGen + strSpecial);
+    // } else {
+    //   setPasswordGen(passwordGen.replace(strSpecial, ""));
+    // }
   }, [checkboxOptions]);
 
   useEffect(() => {
@@ -76,7 +106,9 @@ const PasswordConfig = () => {
             type="checkbox"
             className="checkbox"
             checked={checkboxOptions.uppercase}
-            onChange={() => handleCheckboxOption("uppercase")}
+            onChange={(e) =>
+              handleCheckboxOption("uppercase", e.target.checked)
+            }
           />
         </div>
         <div className="input-checkbox-container">
@@ -85,7 +117,9 @@ const PasswordConfig = () => {
             type="checkbox"
             className="checkbox"
             checked={checkboxOptions.lowercase}
-            onChange={() => handleCheckboxOption("lowercase")}
+            onChange={(e) =>
+              handleCheckboxOption("lowercase", e.target.checked)
+            }
           />
         </div>
         <div className="input-checkbox-container">
@@ -94,7 +128,7 @@ const PasswordConfig = () => {
             type="checkbox"
             className="checkbox"
             checked={checkboxOptions.numbers}
-            onChange={() => handleCheckboxOption("numbers")}
+            onChange={(e) => handleCheckboxOption("numbers", e.target.checked)}
           />
         </div>
         <div className="input-checkbox-container">
@@ -103,7 +137,9 @@ const PasswordConfig = () => {
             type="checkbox"
             className="checkbox"
             checked={checkboxOptions.specialChar}
-            onChange={() => handleCheckboxOption("specialChar")}
+            onChange={(e) =>
+              handleCheckboxOption("specialChar", e.target.checked)
+            }
           />
         </div>
       </div>
