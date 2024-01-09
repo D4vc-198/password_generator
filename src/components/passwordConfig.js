@@ -3,6 +3,7 @@ import "./../styles/passwordConfig.css";
 
 const PasswordConfig = () => {
   const [passLength, setPassLength] = useState(8);
+  const [passwordGen, setPasswordGen] = useState("");
   const [checkboxOptions, setCheckboxOptions] = useState({
     uppercase: false,
     lowercase: false,
@@ -18,8 +19,24 @@ const PasswordConfig = () => {
   };
 
   useEffect(() => {
-    console.log(checkboxOptions);
+    if (checkboxOptions.uppercase === true) {
+      setPasswordGen(passwordGen + "1");
+    }
+    if (checkboxOptions.lowercase === true) {
+      setPasswordGen(passwordGen + "2");
+    }
+    if (checkboxOptions.numbers === true) {
+      setPasswordGen(passwordGen + "3");
+    }
+    if (checkboxOptions.specialChar === true) {
+      setPasswordGen(passwordGen + "4");
+    }
+
   }, [checkboxOptions]);
+
+  useEffect(() => {
+    console.log("passwordGen", passwordGen)
+  }, [passwordGen])
 
   return (
     <div className="password-config-container">
