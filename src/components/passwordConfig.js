@@ -11,6 +11,11 @@ const PasswordConfig = () => {
     specialChar: false,
   });
 
+  const strUpperCase = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+  const strLowerCase = "abcdefghijklmnñopqrstuvwxyz"
+  const strNumbers = "0123456789"
+  const strSpecial = "!”#$%&‘()*+,-./:;=?@[\]^_`{|}~"
+
   const handleCheckboxOption = (option) => {
     setCheckboxOptions((prevState) => ({
       ...prevState,
@@ -20,16 +25,16 @@ const PasswordConfig = () => {
 
   useEffect(() => {
     if (checkboxOptions.uppercase === true) {
-      setPasswordGen(passwordGen + "1");
+      setPasswordGen(passwordGen + strUpperCase);
     }
     if (checkboxOptions.lowercase === true) {
-      setPasswordGen(passwordGen + "2");
+      setPasswordGen(passwordGen + strLowerCase);
     }
     if (checkboxOptions.numbers === true) {
-      setPasswordGen(passwordGen + "3");
+      setPasswordGen(passwordGen + strNumbers);
     }
     if (checkboxOptions.specialChar === true) {
-      setPasswordGen(passwordGen + "4");
+      setPasswordGen(passwordGen + strSpecial);
     }
 
   }, [checkboxOptions]);
