@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./../styles/passwordConfig.css";
 
 const PasswordConfig = (props) => {
-  const {setPassword} = props
+  const { setPassword } = props;
 
   const [passLength, setPassLength] = useState(8);
   const [passwordOptions, setPasswordOptions] = useState("");
@@ -61,6 +61,11 @@ const PasswordConfig = (props) => {
 
     setPassword(passGen);
   };
+
+  //ACTIVA EL BOTON DE "GENERATE" SI ALGUNA OPCION DE LOS CHECKBOX ESTA ACTIVO
+  const validateOptions = Object.values(checkboxOptions).some(
+    (value) => value === true
+  );
 
   return (
     <div className="password-config-container">
@@ -122,7 +127,11 @@ const PasswordConfig = (props) => {
         </div>
       </div>
       <div className="btn-generate-password-container">
-        <button className="btn-generate-password" onClick={generatePassword}>
+        <button
+          className="btn-generate-password"
+          onClick={generatePassword}
+          disabled={!validateOptions}
+        >
           Generate
         </button>
       </div>
