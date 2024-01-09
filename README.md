@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+<h1 align="center">Password Generator</h1>
+<div align="center">
+  <a><img src="https://img.shields.io/badge/Estado%3A-Terminado-success" width="15%"></a>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Descripción</h2>
 
-## Available Scripts
+Este proyecto es una aplicación web que crea contraseñas aleatorias y seguras. Este se desarrollo utilizando ReactJS, una biblioteca de JavaScript para construir interfaces de usuario.
 
-In the project directory, you can run:
+El generador de contraseñas puede incluir varias características, como la capacidad de especificar la longitud de la contraseña y la inclusión de ciertos tipos de caracteres (como números, letras mayúsculas y minúsculas, y símbolos). La contraseña generada se crea utilizando lógica de JavaScript y luego se muestra al usuario.
 
-### `npm start`
+> [!IMPORTANT]
+> Es importante mencionar que estas aplicaciones deben ser utilizadas con precaución, ya que la seguridad de las contraseñas generadas depende de la implementación del generador.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/D4vc-198/password_generator/assets/69604964/b0e62a1c-0982-4c40-9291-57b8624e030e)
 
-### `npm test`
+<h2>Tecnologías usadas</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">&nbsp;<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3 align="center">Sobre mí 👨‍💻</h3>
+<p align="center"><a href="https://www.facebook.com/D4vc198/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></a>&nbsp;<a href="https://www.linkedin.com/in/diego-a-valdez-a4405a213/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>&nbsp;<a href="https://github.com/d4vc-198"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>&nbsp;<a href="https://play.google.com/store/apps/developer?id=Diego+A.+Valdez&hl=es_MX"><img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white"></a>
+</p>
