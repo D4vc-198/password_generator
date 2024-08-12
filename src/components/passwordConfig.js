@@ -78,7 +78,10 @@ const PasswordConfig = (props) => {
           min="0"
           max="100"
           value={passLength}
-          onChange={(e) => setPassLength(e.target.value)}
+          onChange={(e) => {
+            setPassLength(e.target.value)
+            generatePassword()
+          }}
         />
       </div>
       {/* PASSWORD CHARACTERS CONTAINER */}
